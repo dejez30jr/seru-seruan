@@ -12,7 +12,7 @@ function generateKhodamName() {
   }
 
   if (name.trim().length < 3) {
-    notificationElement.textContent = "Nama anda terlalu pendek untuk dicarikan khodam (minimal 3 huruf).";
+    notificationElement.textContent = "Nama anda terlalu pendek untuk dicarikan (minimal 3 huruf).";
     notificationElement.style.display = "block";
     document.getElementById("result").style.display = "none";
     return;
@@ -30,147 +30,7 @@ function generateKhodamName() {
   name = name.charAt(0).toUpperCase() + name.slice(1);
 
   var khodamNames = [
-    // "Kadal Sakti",
-    // "Burung Hudhud",
-    // "Kucing Garong",
-    // "Monyet Sakti",
-    // "Ular Naga",
-    // "Kelinci Ajaib",
-    // "Tupai Gesit",
-    // "Katak Beracun",
-    // "Landak Berduri",
-    // "Kura-kura Ninja",
-    // "Harimau Putih",
-    // "Beruang Kutub",
-    // "Rubah Ekor Sembilan",
-    // "Singa Emas",
-    // "Gajah Biru",
-    // "Jerapah Terbang",
-    // "Kangguru Perak",
-    // "Koala Bermata Satu",
-    // "Panda Raksasa",
-    // "Kelelawar Vampir",
-    // "Burung Merak",
-    // "Burung Hantu",
-    // "Burung Kolibri",
-    // "Burung Bangau",
-    // "Burung Camar",
-    // "Ikan Hiu",
-    // "Ikan Pari",
-    // "Ikan Mas",
-    // "Ikan Koi",
-    // "Ikan Piranha",
-    // "Laba-laba Tarantula",
-    // "Kalajengking Raksasa",
-    // "Lebah Madu",
-    // "Kupu-kupu Raksasa",
-    // "Belalang Sembah",
-    // "Kecoa Terbang",
-    // "Semut Api",
-    // "Rayap Pelangi",
-    // "Kepiting Kenari",
-    // "Udang Galah",
-    // "Cacing Besar",
-    // "Siput Raksasa",
-    // "Keong Racun",
-    // "Bekicot Emas",
-    // "Lipan Biru",
-    // "Kumbang Badak",
-    // "Kunang-kunang",
-    // "Capung Raksasa",
-    // "Lalat Hijau",
-    // "Nyamuk Sakti",
-    // "Kadal Licin",
-    // "Burung Elang",
-    // "Kucing Anggora",
-    // "Monyet Salto",
-    // "Ular Kobra",
-    // "Kelinci Terbang",
-    // "Tupai Ninja",
-    // "Katak Loncat",
-    // "Landak Cerdas",
-    // "Kura-kura Perkasa",
-    // "Harimau Loreng",
-    // "Beruang Coklat",
-    // "Rubah Cerdik",
-    // "Singa Putih",
-    // "Gajah Afrika",
-    // "Jerapah Langit",
-    // "Kangguru Biru",
-    // "Koala Lucu",
-    // "Panda Mini",
-    // "Kelelawar Gua",
-    // "Burung Cendrawasih",
-    // "Burung Kakaktua",
-    // "Burung Merpati",
-    // "Burung Pelikan",
-    // "Burung Nuri",
-    // "Komodo Perkasa",
-    // "Orangutan Bijak",
-    // "Rusa Emas",
-    // "Babi Hutan Garang",
-    // "Banteng Liar",
-    // "Buaya Putih",
-    // "Berang-berang Cerdas",
-    // "Landak Jawa",
-    // "Musang Ajaib",
-    // "Trenggiling Langka",
-    // "Kukang Lucu",
-    // "Tarsius Gesit",
-    // "Macan Tutul",
-    // "Kucing Hutan",
-    // "Ajag Kalimantan",
-    // "Rusa Timor",
-    // "Kancil Cerdik",
-    // "Bekantan Pemalu",
-    // "Kukabura Cerewet",
-    // "Angsa Hitam",
-    // "Merpati Pos",
-    // "Jalak Bali",
-    // "Elang Jawa",
-    // "Merak Hijau",
-    // "Kuau Kerdil",
-    // "Sempidan Biru",
-    // "Trulek Ekor Pita",
-    // "Pelatuk Jambul",
-    // "Rangkong Badak",
-    // "Kakatua Jambul Kuning",
-    // "Nuri Kepala Hitam",
-    // "Betet Biasa",
-    // "Gelatik Jawa",
-    // "Madu Kelapa",
-    // "Kuntul Kerbau",
-    // "Bangau Tongtong",
-    // "Ikan Belida",
-    // "Ikan Pesut",
-    // "Lumba-lumba Hidung Botol",
-    // "Hiu Martil",
-    // "Pari Manta",
-    // "Kura-kura Belimbing",
-    // "Penyu Sisik",
-    // "Buaya Muara",
-    // "Biawak Komodo",
-    // "Bunglon Raksasa",
-    // "Tokek Pohon",
-    // "Ular Sanca Kembang",
-    // "Ular Welang",
-    // "Berudu Sakti",
-    // "Katak Pohon",
-    // "Bangkong Raksasa",
-    // "Kodok Buduk",
-    // "Kosong",
-    "Aquarius",
-    "Pisces",
-    "Aries",
-    "Taurus",
-    "Gemini",
-    "Cancer",
-    "Leo",
-    "Virgo",
-    "Libra",
-    "Scorpio",
-    "Sagitarius",
-    "Capicorn",
+    
   ];
 
   if (khodamData.hasOwnProperty(name)) {
@@ -198,21 +58,16 @@ function generateKhodamName() {
 
 function showFakeLoadingForEmptyKhodam(name) {
   var emptyKhodamDescriptions = [
-    "Wah, sepertinya zodiak Anda sedang liburan di dimensi lain. Mungkin sedang selfie dengan hantu lokal!",
-    "Hmm, Zodiak Anda tampaknya masih dalam proses pengiriman spiritual. Mungkin terjebak macet di jalan raya alam gaib.",
-    "zodiak Anda saat ini masih dalam tahap pelatihan di akademi makhluk halus. Sabar ya, nanti juga lulus kok!",
-    "Ups! zodiak Anda sepertinya tersesat di labirin astral. Tenang, GPS gaib sedang menuntunnya ke Anda.",
-    "zodiak Anda sedang dalam perjalanan spiritual, mencari pencerahan di gunung mistis. semoga cepat kembali!",
-    "Sepertinya zodiak Anda masih malu-malu. Mungkin Anda perlu menyiapkan kue dan teh untuk menyambutnya?",
-    "zodiak Anda sedang antri di kantor urusan makhluk gaib. Birokrasi di alam astral ternyata tidak jauh beda!",
-    "Anda terlalu unik! Para zodiak masih bingung memilih siapa yang cocok. Sabar, ya, casting khodam butuh waktu.",
-    "zodiak Anda masih dalam proses kloning di lab gaib. Tenang, mereka sedang berusaha membuat yang terbaik untuk Anda!",
-    "Anda tidak memiliki zodiak, zodiak Anda masih dalam perjalanan ghaib menuju Anda",
+    "error",
+    "server apdet.",
+    "gagal",
+    "coba lagi",
+    "waduhh saya kurang tau dehhh heheh"
   ];
 
   Swal.fire({
     title: "Mohon Tunggu...",
-    html: "Meminta si udin petot mencari informasi tentang kamu...",
+    html: "Meminta si dzBot mencari informasi tentang kamu...",
     allowOutsideClick: false,
     showConfirmButton: false,
     didOpen: () => {
@@ -223,24 +78,24 @@ function showFakeLoadingForEmptyKhodam(name) {
     var randomIndex = Math.floor(Math.random() * emptyKhodamDescriptions.length);
     var khodamDescription = emptyKhodamDescriptions[randomIndex];
     khodamData[name] = {
-      khodamName: "Kosong",
+      khodamName: "kurang tau",
       khodamDescription: khodamDescription,
     };
-    displayResult(name, "Kosong", khodamDescription);
+    displayResult(name, "kurang tau", khodamDescription);
   });
 }
 
 function generateKhodamDescription(name, khodamName) {
   var promptText =
-    "Jelaskan zodiak " +
+    "Jawab pertanyaan " +
     khodamName +
-    " dalam Bahasa indonesia hanya 15 kata saja menggunakan lelucon dan berikan arti yang terlihat meyakinkan dengan mengaitkannya pada karakteristik hewan atau makhluk astral yang terkait dari nama " +
+    " menggunakan bahasa indonesia hanya 30 kata saja menggunakan rangkuman yang ada yang terkait dengan pertanyaan nya " +
     name +
-    ", contohnya jika khodamnya adalah Khodam kadal sakti maka contoh jawabanya kamu suka bersembunyi dengan cepat dan sangat lincah memikat hati wanita.";
+    ", random sesuai dengan pertanyaan.";
 
   Swal.fire({
     title: "Mohon Tunggu...",
-    html: "Meminta si udin petot mencari informasi tentang kamu...",
+    html: "Meminta si udin petot mencari informasi...",
     allowOutsideClick: false,
     showConfirmButton: false,
     didOpen: () => {
